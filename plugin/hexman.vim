@@ -443,7 +443,7 @@ function s:HEX_XxdConv()
     call s:HEX_XxdFind()
     exe '%!"' . g:xxdprogram . '"' 
   endif
-  if getline(1) =~ "^0000000:"		" only if it worked
+  if getline(1) =~ "^00000000:"		" only if it worked
     set ft=xxd
   else
     return				" can't start xxd
