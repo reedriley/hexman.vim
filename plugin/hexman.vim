@@ -146,6 +146,11 @@
 "         In this mode I'm not able to map some keys - like: + - ?
 "	Appreciate any help!
 "=============================================================================
+" Not loading
+if exists("g:loaded_hexman")
+   finish
+endif
+let g:loaded_hexman = 1
 "
 " 	Define mapping:
 "
@@ -203,11 +208,6 @@ noremap <SID>Find      :call <SID>HEX_Find()<CR>
 " the end of the plugin this value is restored.
 let s:save_cpo = &cpo
 set cpo&vim
-" Not loading
-if exists("loaded_hexman")
-   finish
-endif
-let loaded_hexman = 1
 "
 "=============================================================================
 " 30JUL03 FR Add menue
